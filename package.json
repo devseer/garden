@@ -1,0 +1,12 @@
+{
+	"devDependencies": {
+		"coffee-script": "latest"
+	},
+
+	"scripts": {
+		"clean": "rm bin/*",
+		"cat": "cat src/core/base.coffee src/data/*.coffee src/system/*.coffee > bin/game.coffee",
+		"coffee": "coffee --compile --output bin bin/game.coffee",
+		"build": "npm run clean && npm run cat && npm run coffee"
+	}
+}
